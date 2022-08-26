@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Game</title>
+</head>
+<body>
+        <header>
+        <h2>Vic👁‍🗨Words</h2>
+    </header>
+    <section>
+        <p class="type">Type The Given Word In <span class="text-success" id="seconds">5</span> Seconds</p>
+    </section>
+    <section>
+        <h1 id="current-word">Starting....</h1>
+    </section>
+    <section>
+        <input type="text" placeholder="start typing..." id="word-input" autofocus>
+    </section>
+    <section>
+        <h4 id="message"></h4>
+    </section>
+    <section class="time">
+        <h4>Time Left: <span id="time">0</span></h4> 
+        <h4>Score: <span id="score">0</span></h4>
+    </section>
+
+    <section class="btn">
+        <h2>Choose Level</h2>
+        <button onclick="levelOne()">Level 1</button><button onclick="levelTwo()">Level 2</button><button onclick="levelThree()">Level 3</button>
+    </section>
+
+    <section class="btn2">
+        <button onclick="levelFour()">Level 4</button><button onclick="levelFive()">Level 5</button><button onclick="levelSix()">Level 6</button>
+    </section>
+
+    <section class="btn3">
+        <button onclick="levelSeven()">Level 7</button><button onclick="levelEight()">Level 8</button><button onclick="levelNine()">Level 9</button>
+    </section>
+
+    <section class="instruction">
+        <h4>Instruction</h4>
+        <p>Type Each Word In The Given Amount Of Seconds to score. <br>
+        To Play Again, Just Type The current word. Your Score Will Reset.</p>
+    </section>
+
+    <footer><p>Created With ❤ By Victor Patrick</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

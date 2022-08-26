@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: rgb(65, 209, 65);
+    box-shadow: 1px 3px 3px #b6afaf;
+    padding: 5px;
+    max-width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: rgb(108, 177, 108) 2px solid;
+}
+.type {
+    margin: -10px;
+}
+input {
+    padding: 10px 0;
+    padding-left: 10px;
+    padding-right: 70px;
+    box-shadow: 0.5px 2px 2px #b6afaf;
+    border-radius: 15px;
+    margin-bottom: -10px;
+}
+::placeholder {
+    font-size: 18px;
+}
+
+.time {
+    display: inline-flex;
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
+
+.time :nth-child(1) {
+    padding-right: 20px;
+}
+
+.text-success,
+#score,
+#time {
+    color: rgb(65, 209, 65);
+    font-size: 50px;
+}
+
+.instruction {
+    background-color: rgb(124, 124, 124);
+    padding: 1px 4px;
+    margin: 0 20%;
+    border-radius: 20px;
+}
+
+button {
+    padding: 15px;
+    background-color: rgb(159, 221, 159);
+    color: rgb(58, 57, 57);
+    font-weight: bolder;
+    border: rgb(124, 124, 124) 2px solid;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(58, 57, 57);
+    color: white;
+    border: rgb(108, 177, 108) 2px solid;
+}
+
+.btn :nth-child(2),
+.btn :nth-child(3) {
+    margin-right: 15px;
+}
+
+.btn2 :nth-child(1),
+.btn2 :nth-child(2) {
+    margin-right: 15px;
+}
+
+.btn3 :nth-child(1),
+.btn3 :nth-child(2) {
+    margin-right: 15px;
+}
+
+.btn4 :nth-child(1),
+.btn4 :nth-child(2) {
+    margin-right: 15px;
+}
+
+.btn5 :nth-child(1),
+.btn5 :nth-child(2) {
+    margin-right: 15px;
+}
+
+footer {
+    color: rgb(159, 221, 159);
+}
