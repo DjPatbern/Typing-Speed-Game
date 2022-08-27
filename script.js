@@ -1,17 +1,17 @@
-window.addEventListener("load", init);
+window.addEventListener("load", init, playAudio);
 
 //Available Levels
 
 const levels = {
-  one: 9,
-  two: 8,
-  three: 7,
-  four: 6,
-  five: 5,
-  six: 4,
-  seven: 3,
-  eight: 2,
-  nine: 1,
+  one: 20,
+  two: 17,
+  three: 15,
+  four: 13,
+  five: 11,
+  six: 9,
+  seven: 7,
+  eight: 5,
+  nine: 3,
 };
 
 let currentLevel = levels.one;
@@ -32,6 +32,12 @@ const scoreDisplay = document.querySelector("#score");
 const timeDisplay = document.querySelector("#time");
 const message = document.querySelector("#message");
 const seconds = document.querySelector("#seconds");
+
+function startAgain() {
+  time = 15;
+  startMatch();
+
+}
 
 
 // List Of Random Word...
@@ -275009,7 +275015,9 @@ function startMatch() {
 
 function matchWords() {
   if (wordInput.value.toLowerCase() === currentWord.innerHTML) {
-    message.innerHTML = "Correct !!!";
+    message.innerHTML =
+      '<Img src="https://www.picdesi.com/upload/comment/awesome/awesome-012.gif" style="height:80px;" />';
+      sound.play()
     return true;
   } else {
     message.innerHTML = "";
@@ -275043,6 +275051,8 @@ function checkStatus() {
     message.innerHTML =
       '<Img src="https://thumbs.gfycat.com/SlimWarmBluemorphobutterfly-max-1mb.gif" style="height:80px;" />';
     score = -1;
+    // sound.pause();
+    // effect.play();
   }
 }
 
@@ -275076,6 +275086,7 @@ function levelSix() {
   seconds.innerHTML = currentLevel;
 }
 
+
 function levelSeven() {
   currentLevel = levels.seven;
   seconds.innerHTML = currentLevel;
@@ -275090,3 +275101,33 @@ function levelNine() {
   currentLevel = levels.nine;
   seconds.innerHTML = currentLevel;
 }
+
+function noCopy() {
+  alert(`Sorry You Can't Copy The Game Words`)
+};
+
+let sound = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  sound.play(); 
+} 
+
+function pauseAudio() { 
+  sound.pause(); 
+  // effect.pause();
+}
+
+// let effect = document.getElementById('myEffect');
+
+// function offLoop() {
+//   effect.loop = false;
+//   effect.load();
+// }
+// function playAudio() {
+//   var x = document.getElementById("myAudio").autoplay;
+//   document.getElementById("demo").innerHTML = x;
+// }
+
+// function startAgain() {
+//   return window.addEventListener("load", init);
+// }

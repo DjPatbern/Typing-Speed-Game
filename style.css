@@ -1,102 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background-color: black;
-    color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: rgb(245, 235, 218);
+  color: black;
+  background-image: url("https://i.pinimg.com/originals/16/80/ab/1680ab571cb361c836d181033e4b949f.png");
+  background-size: cover;
 }
 
-header {
-    background-color: rgb(65, 209, 65);
-    box-shadow: 1px 3px 3px #b6afaf;
-    padding: 5px;
-    max-width: 60%;
-    margin: 0 auto;
-    border-radius: 20px;
-    border: rgb(108, 177, 108) 2px solid;
+.header {
+  background-color: rgb(31, 31, 61);
+  box-shadow: 1.5px 4px 4px #b6afaf;
+  padding: 5px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: #b6afaf 2px solid;
+  color: rgb(245, 235, 218);
+  margin-bottom: 10px;
 }
 .type {
-    margin: -10px;
+  margin: -2px;
 }
 input {
-    padding: 10px 0;
-    padding-left: 10px;
-    padding-right: 70px;
-    box-shadow: 0.5px 2px 2px #b6afaf;
-    border-radius: 15px;
-    margin-bottom: -10px;
+  padding: 10px 0;
+  padding-left: 10px;
+  padding-right: 70px;
+  box-shadow: 0.5px 2.5px 2.5px #6a5f88;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: -10px;
+}
+
+input[type="text"]:hover {
+    border: 1px solid grey;
+}
+input {
+    outline: none;
 }
 ::placeholder {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .time {
-    display: inline-flex;
-    margin-top: -40px;
-    margin-bottom: -40px;
+  display: inline-flex;
+  margin-top: -20px;
+
+  color: rgb(31, 31, 61);
+  margin-left: -75px;
+}
+
+.time-left,
+.score-left {
+  color: rgb(31, 31, 61);
+  border-radius: 10%;
 }
 
 .time :nth-child(1) {
-    padding-right: 20px;
+  padding-right: 20px;
 }
-
-.text-success,
-#score,
+#seconds {
+  color: wheat;
+  font-size: 35px;
+  background-color: rgb(31, 31, 61);
+  border-radius: 20%;
+  border: rgb(31, 31, 61) 1px solid;
+}
+#score {
+  color: wheat;
+  font-size: 30px;
+  background-color: rgb(72, 72, 97);
+  border-radius: 20%;
+  border: rgb(31, 31, 61) 1px solid;
+  padding: 6px;
+}
 #time {
-    color: rgb(65, 209, 65);
-    font-size: 50px;
+  color: wheat;
+  font-size: 30px;
+  background-color: rgb(72, 72, 97);
+  border-radius: 20%;
+  border: rgb(31, 31, 61) 1px solid;
+  padding: 6px;
 }
 
 .instruction {
-    background-color: rgb(124, 124, 124);
-    padding: 1px 4px;
-    margin: 0 20%;
-    border-radius: 20px;
+  background-color: rgb(72, 72, 97);
+  padding: 1px 4px;
+  margin: 0 20%;
+  border-radius: 20px;
+  color: rgb(245, 235, 218);
 }
 
+#current-word {
+  text-transform: uppercase;
+  color: wheat;
+  box-shadow: 1.5px 4px 4px #b6afaf;
+  padding: 5px 10px;
+  max-width: 45%;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: #b6afaf 2px solid;
+  background-color: rgb(31, 31, 61);
+}
+
+.myAudio {
+    display: none;
+}
+
+
 button {
-    padding: 15px;
-    background-color: rgb(159, 221, 159);
-    color: rgb(58, 57, 57);
-    font-weight: bolder;
-    border: rgb(124, 124, 124) 2px solid;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    cursor: pointer;
+  padding: 15px;
+  background-color: rgb(72, 72, 97);
+  color: rgb(245, 235, 218);
+  font-weight: bolder;
+  border: rgb(31, 31, 61) 2px solid;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  outline: none;
 }
 
 button:hover {
-    background-color: rgb(58, 57, 57);
-    color: white;
-    border: rgb(108, 177, 108) 2px solid;
+  background-color: rgb(245, 235, 218);
+  color: rgb(31, 31, 61);
+  border: rgb(72, 72, 97) 2px solid;
 }
 
 .btn :nth-child(2),
 .btn :nth-child(3) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .btn2 :nth-child(1),
 .btn2 :nth-child(2) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .btn3 :nth-child(1),
 .btn3 :nth-child(2) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .btn4 :nth-child(1),
 .btn4 :nth-child(2) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .btn5 :nth-child(1),
 .btn5 :nth-child(2) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
-footer {
-    color: rgb(159, 221, 159);
+.start-btn button:hover {
+    background-color: rgb(31, 31, 61);
+    color: wheat;
 }
+/* #message {
+    color: rgb(31, 31, 61);
+    box-shadow: 0.6px 2.5px 2.5px #707070;
+    border-radius: 20px;
+    font-size: 25px;
+} */
+
+.choose {
+  color: rgb(31, 31, 61);
+  background-color: wheat;
+  max-width: 25%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border: rgb(72, 72, 97) solid 2px;
+  border-radius: 10px;
+}
+
+.sound-btn {
+    float: right;
+}
+footer {
+  color: rgb(31, 31, 61);
+}
+
+
+
+@media (max-width: 600px) {
+  .time-left,
+  .score-left {
+    color: white;
+  }
+
+  .sound-btn {
+    display: none;
+  }
+
+      /* drop down*/
+.dropdown {
+    float: left;
+    margin-top: -7px; 
+}
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-bottom: 10px;
+    border-radius: 20px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .instruction {
+    display: none;
+}
+
+.off-btn {
+    float: right;
+    margin-top: -7px;
+}
+
+
+footer {
+    color: wheat;
+  }
+
+}
+
+.instruction1 {
+    background-color: rgb(72, 72, 97);
+    padding: 1px 4px;
+    margin: 0 20%;
+    border-radius: 20px;
+    color: rgb(245, 235, 218);
+  }
+
+@media screen and (min-width: 600px) {
+    .dropdown {
+        display: none;
+    }
+    .type {
+        margin-left: 120px;
+    }
+
+    .off-btn {
+        display: none;
+    }
+}
+
