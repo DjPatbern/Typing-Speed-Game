@@ -1,15 +1,15 @@
-window.addEventListener("load", init, playAudio);
+window.addEventListener("load", init);
 
 //Available Levels
 
 const levels = {
-  one: 20,
-  two: 17,
-  three: 15,
-  four: 13,
-  five: 11,
-  six: 9,
-  seven: 7,
+  one: 15,
+  two: 13,
+  three: 12,
+  four: 11,
+  five: 9,
+  six: 8,
+  seven: 6,
   eight: 5,
   nine: 3,
 };
@@ -32,9 +32,17 @@ const scoreDisplay = document.querySelector("#score");
 const timeDisplay = document.querySelector("#time");
 const message = document.querySelector("#message");
 const seconds = document.querySelector("#seconds");
+const miniSeconds = document.getElementById('mini-seconds')
+
+function playAgain() {
+  if(time === 0) {
+    startAgain()
+  }
+}
 
 function startAgain() {
-  time = 15;
+  time = currentLevel;
+  score = 0;
   startMatch();
 
 }
@@ -274985,14 +274993,17 @@ let words = [
 function init() {
   //Show Level Number
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
   //Load From The Array Of Random Words...
   showWord(words);
+  header.innerHTML = 'Level 1'
   //Start Matching On Word Input...
   wordInput.addEventListener("input", startMatch);
   //Call Countdown every Second...
   setInterval(countdown, 1000);
   //Check Game Status...
   setInterval(checkStatus, 50);
+
 }
 
 //Start Match...
@@ -275056,50 +275067,70 @@ function checkStatus() {
   }
 }
 
+let header = document.getElementById('header')
+
 function levelOne() {
   currentLevel = levels.one;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 1'
 }
 
 function levelTwo() {
   currentLevel = levels.two;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 2'
 }
 
 function levelThree() {
   currentLevel = levels.three;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 3'
 }
 
 function levelFour() {
   currentLevel = levels.four;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 4'
 }
 
 function levelFive() {
   currentLevel = levels.five;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 5'
 }
 
 function levelSix() {
   currentLevel = levels.six;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 6'
 }
 
 
 function levelSeven() {
   currentLevel = levels.seven;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 7'
 }
 
 function levelEight() {
   currentLevel = levels.eight;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 8'
 }
 
 function levelNine() {
   currentLevel = levels.nine;
   seconds.innerHTML = currentLevel;
+  miniSeconds.innerHTML = currentLevel;
+  header.innerHTML = 'Level 9'
 }
 
 function noCopy() {

@@ -10,11 +10,11 @@
 <body>
                        <!-- drop down -->
 <div class="dropdown">
-    <button class="dropbtn">Menu</button>
+    <button class="dropbtn">=</button>
     <div class="dropdown-content">
-        <h4>Sound</h4>
+        <!-- <h4>Sound</h4>
         <button onclick="playAudio()" type="button">On🔊</button>
-        <button onclick="pauseAudio()" type="button">Off🔇</button>
+        <button onclick="pauseAudio()" type="button">Off🔇</button> -->
         <section class="instruction1">
             <h4>Instructions</h4>
             <p>1. Type Each Word In The Given Amount Of Seconds to score. <br>
@@ -25,73 +25,105 @@
     </div>
   </div>
   <section class="sound-btn">
-    <button onclick="playAudio()" type="button">On🔊</button>
-    <button onclick="pauseAudio()" type="button">Off🔇</button>
+    <button onclick="playAudio()" type="button">🔊</button>
+    <button onclick="pauseAudio()" type="button">🔇</button>
 </section>
-  <section class="off-btn">
-    <button onclick="pauseAudio()" type="button">Off🔇</button>
+<section class="off-btn">
+    <button onclick="playAudio()" type="button">🔊</button>
+    <button onclick="pauseAudio()" type="button">🔇</button>
 </section>
     <header>
-        <h2 class="header">Vic👁‍🗨Words</h2>
+        <h2 id="header">Vic👁‍🗨Words</h2>
     </header>
-    <section>
-        <p class="type">Type The Given Word In <span class="text-success" id="seconds">0</span> Seconds</p>
-    </section>
-    <section>
-        <h1 oncopy="noCopy()"><span id="current-word">Game Is Starting....</span></h1>
-    </section>
-    <section>
-        <input type="text" placeholder="start typing..." id="word-input" autofocus>
-    </section>
-    <section>
-        <h4 id="message"></h4>
-    </section>
-    <section class="time">
-        <h4 class="white-color"><span class="time-left">Time Left:</span> <span id="time">0</span></h4> 
-        <h4 class="white-color"><span class="score-left">Score:</span> <span id="score">0</span></h4>
-    </section>
+    <section class="main-container">
 
-    <section class="start-btn">
-        <button onclick="startAgain()">Play Again</button>
+        <section class="big-type">
+            <p class="type">Type The Given Word In <span class="text-success" id="seconds">0</span> Seconds</p>
+        </section>
+        <section>
+            <h1 oncopy="noCopy()"><span id="current-word">Game Is Starting....</span></h1>
+        </section>
+        <section>
+            <input type="text" placeholder="start typing..." id="word-input" autofocus>
+        </section>
+        <section>
+            <h4 id="message"></h4>
+        </section>
+        <section class="time-score">
+            <span class="time-left">Time Left:</span>
+            <span class="score-left">Score:</span>
+        </section>
+        <section class="time">
+            <h4 class="white-color"> <span id="time">0</span></h4> 
+            <h4 class="white-color"> <span id="score">0</span></h4>
+        </section>
+    
+        <section class="start-btn">
+            <button onclick="playAgain()">Play Again</button>         
+            <div class="dropdown-levels">
+            <button class="dropbtn">Choose Level:</button>
+            <div class="dropdown-content" id="levels-btn">
+                <section class="btn1">
+                    <button onclick="levelOne()">Level 1</button><button onclick="levelTwo()">Level 2</button><button onclick="levelThree()">Level 3</button>
+                </section>
+            
+                <section class="btn2">
+                    <button onclick="levelFour()">Level 4</button><button onclick="levelFive()">Level 5</button><button onclick="levelSix()">Level 6</button>
+                </section>
+            
+                <section class="btn3">
+                    <button onclick="levelSeven()">Level 7</button><button onclick="levelEight()">Level 8</button><button onclick="levelNine()">Level 9</button>
+                </section>
+            </div>  
+            </div>
+        </section>
+
+        <section class="mini-type">
+            <p class="type">Type The Given Word In <span class="text-success" id="mini-seconds">0</span> Seconds</p>
+        </section>
+
+
+    
+            <section class="levels">
+                <section class="btn">
+                    <h2><span class="choose">Choose Level:</span></h2>
+                    <button onclick="levelOne()">Level 1</button><button onclick="levelTwo()">Level 2</button><button onclick="levelThree()">Level 3</button>
+                </section>
+            
+                <section class="btn2">
+                    <button onclick="levelFour()">Level 4</button><button onclick="levelFive()">Level 5</button><button onclick="levelSix()">Level 6</button>
+                </section>
+            
+                <section class="btn3">
+                    <button onclick="levelSeven()">Level 7</button><button onclick="levelEight()">Level 8</button><button onclick="levelNine()">Level 9</button>
+                </section>
+            </section>
+    
+    
+    
+        <section class="myAudio">
+            <audio id="myAudio" controls autoplay>
+                <source src="./DFAV4PR-sad-piano-background.ogg" type="audio/ogg">
+                <source src="./DFAV4PR-sad-piano-background.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+        </section>
+    
+        <!-- <section class="myEffect">
+            <audio id="myEffect">
+                <source src="./Sad Trombone - Gaming Sound Effect (HD).ogg" type="audio/ogg">
+                <source src="./Sad Trombone - Gaming Sound Effect (HD).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+        </section> -->
+    
+        <section class="instruction">
+            <h4>Instructions</h4>
+            <p>1. Type Each Word In The Given Amount Of Seconds to score. <br>
+                <br>
+            2. To Play Again, Just Type The current word. Your Score Will Reset.</p>
+        </section> 
     </section>
-
-    <section class="btn">
-        <h2><span class="choose">Choose Level:</span></h2>
-        <button onclick="levelOne()">Level 1</button><button onclick="levelTwo()">Level 2</button><button onclick="levelThree()">Level 3</button>
-    </section>
-
-    <section class="btn2">
-        <button onclick="levelFour()">Level 4</button><button onclick="levelFive()">Level 5</button><button onclick="levelSix()">Level 6</button>
-    </section>
-
-    <section class="btn3">
-        <button onclick="levelSeven()">Level 7</button><button onclick="levelEight()">Level 8</button><button onclick="levelNine()">Level 9</button>
-    </section>
-
-
-
-    <section class="myAudio">
-        <audio id="myAudio" controls autoplay>
-            <source src="./DFAV4PR-sad-piano-background.ogg" type="audio/ogg">
-            <source src="./DFAV4PR-sad-piano-background.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-    </section>
-
-    <!-- <section class="myEffect">
-        <audio id="myEffect">
-            <source src="./Sad Trombone - Gaming Sound Effect (HD).ogg" type="audio/ogg">
-            <source src="./Sad Trombone - Gaming Sound Effect (HD).mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-    </section> -->
-
-    <section class="instruction">
-        <h4>Instructions</h4>
-        <p>1. Type Each Word In The Given Amount Of Seconds to score. <br>
-            <br>
-        2. To Play Again, Just Type The current word. Your Score Will Reset.</p>
-    </section> 
     <footer><p>Created With ❤ By Victor Patrick</p></footer>
 <script src="script.js"></script>
 </body>

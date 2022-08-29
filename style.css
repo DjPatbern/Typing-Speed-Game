@@ -9,7 +9,7 @@ body {
   background-size: cover;
 }
 
-.header {
+#header {
   background-color: rgb(31, 31, 61);
   box-shadow: 1.5px 4px 4px #b6afaf;
   padding: 5px;
@@ -34,10 +34,10 @@ input {
 }
 
 input[type="text"]:hover {
-    border: 1px solid grey;
+  border: 1px solid grey;
 }
 input {
-    outline: none;
+  outline: none;
 }
 ::placeholder {
   font-size: 18px;
@@ -48,19 +48,20 @@ input {
   margin-top: -20px;
 
   color: rgb(31, 31, 61);
-  margin-left: -75px;
 }
 
 .time-left,
 .score-left {
   color: rgb(31, 31, 61);
   border-radius: 10%;
+  width: 100%;
 }
 
 .time :nth-child(1) {
   padding-right: 20px;
 }
-#seconds {
+#seconds,
+#mini-seconds {
   color: wheat;
   font-size: 35px;
   background-color: rgb(31, 31, 61);
@@ -73,15 +74,30 @@ input {
   background-color: rgb(72, 72, 97);
   border-radius: 20%;
   border: rgb(31, 31, 61) 1px solid;
-  padding: 6px;
+  padding: 10px;
+  max-width: 10px;
+  margin-left: 60px;
 }
+
 #time {
   color: wheat;
   font-size: 30px;
   background-color: rgb(72, 72, 97);
   border-radius: 20%;
   border: rgb(31, 31, 61) 1px solid;
-  padding: 6px;
+  padding: 10px;
+  max-width: 10px;
+  /* margin-right: -140px; */
+}
+.time-score {
+  margin-bottom: 20px;
+  color: rgb(31, 31, 61);
+  margin-top: -10px;
+  font-weight: bolder;
+}
+
+.score-left {
+  margin-left: 60px;
 }
 
 .instruction {
@@ -105,9 +121,8 @@ input {
 }
 
 .myAudio {
-    display: none;
+  display: none;
 }
-
 
 button {
   padding: 15px;
@@ -151,10 +166,13 @@ button:hover {
 .btn5 :nth-child(2) {
   margin-right: 15px;
 }
-
+.btn1 :nth-child(1),
+.btn1 :nth-child(2) {
+  margin-right: 15px;
+}
 .start-btn button:hover {
-    background-color: rgb(31, 31, 61);
-    color: wheat;
+  background-color: rgb(31, 31, 61);
+  color: wheat;
 }
 /* #message {
     color: rgb(31, 31, 61);
@@ -175,31 +193,150 @@ button:hover {
 }
 
 .sound-btn {
-    float: right;
+  float: right;
 }
 footer {
-  color: rgb(31, 31, 61);
+  color: wheat;
 }
-
-
 
 @media (max-width: 600px) {
   .time-left,
   .score-left {
-    color: white;
+    color: rgb(31, 31, 61);
   }
 
   .sound-btn {
     display: none;
   }
 
-      /* drop down*/
-.dropdown {
+  /* drop down*/
+  .dropdown {
     float: left;
-    margin-top: -7px; 
-}
+    margin-top: -7px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-bottom: 10px;
+    border-radius: 20px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropbtn {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: rgb(31, 31, 61);
+    background-color: wheat;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  /* .dropdown-levels {
+    /* float: left;
+    margin-top: -7px;  */
+
+  .dropdown-levels-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropbtn {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(72, 72, 97);
+  }
+  #levels-btn {
+    padding: 10px 10px;
+    border: rgb(72, 72, 97) 1px solid;
+  }
+  .dropdown-levels-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown-levels:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-levels:hover .dropbtn {
+    background-color: wheat;
+    color: rgb(31, 31, 61);
+  }
+
+  .instruction {
+    display: none;
+  }
+
+  .big-type {
+    display: none;
+  }
+
+  .levels {
+    display: none;
+  }
+
+  .off-btn {
+    float: right;
+    margin-top: -7px;
+  }
+  .off-btn button {
+    padding: 5px;
+    background-color: wheat;
+  }
+
+  .main-container {
+    background-color: #ece5e5;
+    border: rgb(31, 31, 61) 2px solid;
+    border-radius: 16px;
+    padding-bottom: 40px;
+    margin-bottom: 81.5px;
+  }
+  .time {
+    margin-bottom: 10px;
+  }
+
+  .start-btn {
+    padding-bottom: 10px;
+  }
+  footer {
+    color: wheat;
     
-.dropdown-content {
+ 
+  }
+
+  .instruction1 {
+    background-color: rgb(72, 72, 97);
+    padding: 1px 4px;
+    margin: 2% 2%;
+    border-radius: 20px;
+    color: rgb(245, 235, 218);
+  }
+}
+
+/* .dropdown-levels-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -208,55 +345,25 @@ footer {
     z-index: 1;
     padding-bottom: 10px;
     border-radius: 20px;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-  .instruction {
-    display: none;
-}
-
-.off-btn {
-    float: right;
-    margin-top: -7px;
-}
-
-
-footer {
-    color: wheat;
-  }
-
-}
-
-.instruction1 {
-    background-color: rgb(72, 72, 97);
-    padding: 1px 4px;
-    margin: 0 20%;
-    border-radius: 20px;
-    color: rgb(245, 235, 218);
-  }
+  } */
 
 @media screen and (min-width: 600px) {
-    .dropdown {
-        display: none;
-    }
-    .type {
-        margin-left: 120px;
-    }
+  .dropdown {
+    display: none;
+  }
+  .type {
+    margin-left: 120px;
+  }
 
-    .off-btn {
-        display: none;
-    }
+  .off-btn {
+    display: none;
+  }
+
+  .dropdown-levels {
+    display: none;
+  }
+
+  .mini-type {
+    display: none;
+  }
 }
-
